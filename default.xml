@@ -500,7 +500,7 @@
   <project path="vendor/nxp-nfc/opensource/libnfc-nci" name="LineageOS/android_vendor_nxp-nfc_opensource_libnfc-nci" groups="pdk" remote="github" revision="cm-14.1" />
   <project path="vendor/nxp-nfc/opensource/Nfc" name="LineageOS/android_vendor_nxp-nfc_opensource_Nfc" groups="pdk" remote="github" revision="cm-14.1" />
   <project path="hardware/qcom/bootctrl" name="LineageOS/android_hardware_qcom_bootctrl" groups="pdk" remote="github" revision="cm-14.1" />
-  <project path="external/google" name="LineageOS/android_external_google" remote="github" revision="cm-14.1" />
+  <!--project path="external/google" name="LineageOS/android_external_google" remote="github" revision="cm-14.1" /-->
   <project path="external/bouncycastle" name="LineageOS/android_external_bouncycastle" groups="pdk" remote="github" revision="cm-14.1" />
   <project path="external/curl" name="LineageOS/android_external_curl" groups="pdk" remote="github" revision="cm-14.1" />
   <project path="external/libxml2" name="LineageOS/android_external_libxml2" groups="pdk" remote="github" revision="cm-14.1" />
