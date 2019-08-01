@@ -27,6 +27,56 @@ Credits
 * [**AOSPA**](https://github.com/aospa/)
 * [**ABC ROM**](https://github.com/ezio84)
 
+Packages needed?
+-------------
+
+To build AOSP do you need to prepair your macheine:
+
+```bash
+  --Taken from xda: https://forum.xda-developers.com/android/general/build-aosp-extended-ubuntu-18-04-bionic-t3796500--
+  1. I suggest using screen when build so install it
+
+sudo apt-get install screen
+
+2. Add this line to /etc/apt/sources.list
+
+deb http://cz.archive.ubuntu.com/ubuntu trusty main
+
+3. Update repository list
+
+sudo apt-get update
+
+4. Install dependencies for building
+
+mkdir -p ~/bin
+
+wget 'https://storage.googleapis.com/git-repo-downloads/repo' -P ~/bin
+
+chmod +x ~/bin/repo
+
+sudo apt-get install openjdk-8-jdk android-tools-adb bc bison build-essential curl flex g++-multilib gcc-multilib gnupg gperf imagemagick lib32ncurses5-dev lib32readline-dev lib32z1-dev libesd0-dev liblz4-tool libncurses5-dev libsdl1.2-dev libssl-dev libwxgtk3.0-dev libxml2 libxml2-utils lzop pngcrush rsync schedtool squashfs-tools xsltproc yasm zip zlib1g-dev git-core python
+
+5. Setup git
+
+git config --global user.name "your name"
+
+git config --global user.email "your email"
+
+6. Add repo path and enable ccache
+
+nano ~/.bashrc
+
+Add these lines to the bottom of bashrc
+
+export PATH=~/bin:$PATH
+export USE_CCACHE=1
+export LC_ALL=C
+
+Then to enable these use command
+
+source ~/.bashrc
+```
+
 How to Build?
 -------------
 
@@ -34,7 +84,7 @@ To initialize your local repository using the AospExtended trees, use a
 command like this:
 
 ```bash
-  repo init -u git://github.com/AospExtended/manifest.git -b 7.x
+  repo init -u git://github.com/DevelLevel/android_manifest-AEX.git -b 7.x
 ```
   
 Then to sync up:
@@ -49,5 +99,6 @@ Finally to build:
 ```bash
   . build/envsetup.sh
   lunch aosp_device_codename-userdebug
-  mka aex -jx
+  make aex -jx
 ```
+
