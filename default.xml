@@ -517,7 +517,7 @@
   <project path="device/sony/common" name="LineageOS/android_device_sony_common" remote="github" revision="cm-14.1" />
   <project path="hardware/sony/macaddrsetup" name="LineageOS/android_hardware_sony_macaddrsetup" remote="github" revision="cm-14.1" />
   <project path="hardware/sony/timekeep" name="LineageOS/android_hardware_sony_timekeep" remote="github" revision="cm-14.1" />
-  <project path="kernel/sony/msm8994" name="LineageOS/android_kernel_sony_msm8994" remote="github" revision="7.x" />
+  <project path="kernel/sony/msm8994" name="DevelLevel/android_kernel_sony_msm8994" remote="github" revision="7.x" />
   <project path="device/sony/suzuran" name="DevelLevel/android_device_sony_suzuran-AEX" remote="github" revision="7.x" />
   <project path="device/sony/kitakami-common" name="DevelLevel/android_device_sony_kitakami-common-AEX" remote="github" revision="7.x" />
   <project path="vendor/sony" name="DevelLevel/android_vendor_sony_suzuran-AEX" remote="github" revision="7.x" />
