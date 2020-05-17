@@ -36,6 +36,9 @@
   <remote name="NXP" 
           fetch="https://github.com/NXPNFCProject/" 
           />
+  <remote name="Google" 
+          fetch="https://android.googlesource.com/" 
+          />
 
   <default revision="refs/tags/android-7.1.2_r36"
            remote="aosp"
@@ -555,6 +558,7 @@
     <linkfile src="repo_update.sh" dest="repo_update.sh" />
 </project>
 
+<project path="device/sample" name="device/sample" groups="device" remote="Google" revision="nougat-mr1-release">
 
 
   <!-- Vendors -->
