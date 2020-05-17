@@ -28,6 +28,14 @@
   <remote  name="aex-devices"
            fetch="https://github.com/AospExtended-Devices"
            revision="7.x" />
+           
+  <remote name="sony" 
+          fetch="https://github.com/sonyxperiadev/" 
+          />
+  
+  <remote name="NXP" 
+          fetch="https://github.com/NXPNFCProject/" 
+          />
 
   <default revision="refs/tags/android-7.1.2_r36"
            remote="aosp"
@@ -84,7 +92,7 @@
   <project path="external/skia" name="platform_external_skia" groups="pdk-cw-fs,qcom_msm8x26" remote="ex" />
   <project path="external/chromium-webview" name="platform_external_chromium-webview" groups="pdk" remote="ex" />
   <project path="packages/providers/DownloadProvider" name="platform_packages_providers_DownloadProvider" groups="pdk-cw-fs,pdk-fs" remote="ex" />
-  <!--project path="packages/apps/SoundRecorder" name="platform_packages_apps_SoundRecorder" remote="ex" /-->
+  <project path="packages/apps/SoundRecorder" name="platform_packages_apps_SoundRecorder" remote="ex" />
   <project path="packages/apps/PhoneCommon" name="platform_packages_apps_PhoneCommon" groups="pdk-cw-fs,pdk-fs" remote="ex" />
   <project path="external/libpng" name="platform_external_libpng" groups="pdk" remote="ex" />
   <project path="external/jemalloc" name="platform_external_jemalloc" groups="pdk" remote="ex" />
@@ -508,19 +516,45 @@
   <project path="system/update_engine" name="LineageOS/android_system_update_engine" groups="pdk" remote="github" revision="cm-14.1" />
   <project path="external/v8" name="LineageOS/android_external_v8" groups="pdk" remote="github" revision="cm-14.1" />
 
-<!-- Suzuran -->
-  <project path="packages/apps/Snap" name="LineageOS/android_packages_apps_Snap" remote="github" revision="cm-14.1" />
-  <project path="packages/apps/Recorder" name="LineageOS/android_packages_apps_Recorder" remote="github" revision="cm-14.1" />
-  <project path="hardware/broadcom/fm" name="LineageOS/android_hardware_broadcom_fm" remote="github" revision="cm-14.1" />
 
-<!-- Device -->
-  <project path="device/sony/common" name="LineageOS/android_device_sony_common" remote="github" revision="cm-14.1" />
-  <project path="hardware/sony/macaddrsetup" name="LineageOS/android_hardware_sony_macaddrsetup" remote="github" revision="cm-14.1" />
-  <project path="hardware/sony/timekeep" name="LineageOS/android_hardware_sony_timekeep" remote="github" revision="cm-14.1" />
-  <project path="kernel/sony/msm8994" name="DevelLevel/android_kernel_sony_msm8994" remote="github" revision="7.x" />
-  <project path="device/sony/suzuran" name="DevelLevel/android_device_sony_suzuran-AEX" remote="github" revision="7.x" />
-  <project path="device/sony/kitakami-common" name="DevelLevel/android_device_sony_kitakami-common-AEX" remote="github" revision="7.x" />
-  <project path="vendor/sony" name="DevelLevel/android_vendor_sony_suzuran-AEX" remote="github" revision="7.x" />
+
+<!-- Sony/Suzuran -->
+
+
+
+<remove-project name="platform/hardware/qcom/camera" />
+<project path="hardware/qcom/camera" name="camera" groups="device" remote="sony" revision="aosp/LA.BR.1.3.3_rb2.14" />
+<project path="kernel/sony/suzuran" name="kernel" groups="device" remote="sony" revision="aosp/LA.BR.1.3.3_rb2.14" />
+<project path="device/sony/common-headers" name="device-sony-common-headers" groups="device" remote="sony" revision="aosp/LA.BR.1.3.3_rb2.14" />
+
+<project path="vendor/broadcom/bt-fm" name="vendor-broadcom-bt-fm" groups="device" remote="sony" revision="master" />
+<project path="vendor/broadcom/wlan" name="vendor-broadcom-wlan" groups="device" remote="sony" revision="master" />
+
+<project path="device/sony/sepolicy" name="device-sony-sepolicy" groups="device" remote="sony" revision="n-mr1" />
+<project path="device/sony/common" name="device-sony-common" groups="device" remote="sony" revision="n-mr1-legacy" />
+<project path="device/sony/common-init" name="device-sony-common-init" groups="device" remote="sony" revision="n-mr1" />
+<project path="device/sony/kitakami" name="device-sony-kitakami" groups="device" remote="sony" revision="n-mr1" />
+<project path="device/sony/suzuran" name="device-sony-suzuran" groups="device" remote="sony" revision="n-mr1" />
+
+<project path="vendor/nxp/" name="vendor-nxp" groups="device" remote="sony" revision="master" />
+<project path="vendor/nxp/NXPNFCC_FW" name="NXPNFCC_FW" groups="device" remote="NXP" revision="master" />
+
+<project path="vendor/qcom/opensource/dataservices" name="vendor-qcom-opensource-dataservices" groups="device" remote="sony" revision="m-mr1" />
+<project path="vendor/qcom/opensource/fm" name="vendor-qcom-opensource-fm" groups="device" remote="sony" revision="master" />
+<project path="vendor/qcom/opensource/location" name="vendor-qcom-opensource-location" groups="device" remote="sony" revision="m-mr1" />
+<project path="vendor/qcom/opensource/time-services" name="vendor-qcom-opensource-time-services" groups="device" remote="sony" revision="master" />
+<project path="vendor/oss/fingerprint"  name="vendor-sony-oss-fingerprint" groups="device" remote="sony" revision="android-7.1.1_r55" />
+<project path="vendor/oss/macaddrsetup" name="macaddrsetup" groups="device" remote="sony" revision="master" />
+<project path="vendor/oss/thermanager" name="thermanager" groups="device" remote="sony" revision="master" />
+<project path="vendor/oss/timekeep" name="timekeep" groups="device" remote="sony" revision="master" />
+<project path="vendor/oss/transpower" name="transpower" groups="device" remote="sony" revision="android-7.1.1_r55" />
+<project path="packages/apps/ExtendedSettings" name="packages_apps_ExtendedSettings" groups="device" remote="sony" revision="n-mr1" />
+<project path="packages/apps/FMRadio" name="packages-apps-FMRadio" groups="device" remote="sony" revision="master" />
+<project path="vendor/oss/json-c" name="json-c" groups="device" remote="sony" revision="master" />
+<project path="vendor/oss/repo_update" name="repo_update" groups="device" remote="sony" revision="n-mr1-legacy">
+    <linkfile src="repo_update.sh" dest="repo_update.sh" />
+</project>
+
 
 
   <!-- Vendors -->
