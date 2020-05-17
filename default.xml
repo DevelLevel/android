@@ -555,8 +555,8 @@
 <project path="packages/apps/FMRadio" name="packages-apps-FMRadio" groups="device" remote="sony" revision="master" />
 <project path="vendor/oss/json-c" name="json-c" groups="device" remote="sony" revision="master" />
 <project path="vendor/oss/repo_update" name="repo_update" groups="device" remote="sony" revision="n-mr1-legacy">
-    <linkfile src="repo_update.sh" dest="repo_update.sh" />
-</project>
+    <!--linkfile src="repo_update.sh" dest="repo_update.sh" />
+</project-->
 
 <project path="device/sample" name="device/sample" groups="device" remote="Google" revision="nougat-mr1-release">
 
