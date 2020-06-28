@@ -522,7 +522,6 @@
 
 
   <!-- Sony/Suzuran -->
-  <remove-project name="platform/hardware/qcom/camera" />
   <project path="hardware/qcom/camera" name="camera" groups="device" remote="sony" revision="aosp/LA.BR.1.3.3_rb2.14" />
   <project path="kernel/sony/suzuran" name="kernel" groups="device" remote="sony" revision="aosp/LA.BR.1.3.3_rb2.14" />
   <project path="device/sony/common-headers" name="device-sony-common-headers" groups="device" remote="sony" revision="aosp/LA.BR.1.3.3_rb2.14" />
