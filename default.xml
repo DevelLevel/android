@@ -551,9 +551,9 @@
   <project path="packages/apps/ExtendedSettings" name="packages_apps_ExtendedSettings" groups="device" remote="sony" revision="n-mr1" />
   <project path="packages/apps/FMRadio" name="packages-apps-FMRadio" groups="device" remote="sony" revision="master" />
   <project path="vendor/oss/json-c" name="json-c" groups="device" remote="sony" revision="master" />
-  <project path="vendor/oss/repo_update" name="repo_update" groups="device" remote="sony" revision="n-mr1-legacy">
+  <project path="vendor/oss/repo_update" name="repo_update" groups="device" remote="sony" revision="n-mr1-legacy"/>
 
-  <project path="device/sample" name="device/sample" groups="device" remote="Google" revision="nougat-mr1-release">
+  <project path="device/sample" name="device/sample" groups="device" remote="Google" revision="nougat-mr1-release"/>
 
   <!-- Vendors -->
   <project path="vendor/codeaurora/telephony" name="lineageos/android_vendor_codeaurora_telephony" remote="github" revision="cm-14.1" />
