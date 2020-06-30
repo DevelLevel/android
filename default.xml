@@ -530,7 +530,7 @@
   <project path="vendor/broadcom/wlan" name="vendor-broadcom-wlan" groups="device" remote="sony" revision="master" />
 
   <project path="device/sony/sepolicy" name="device-sony-sepolicy" groups="device" remote="sony" revision="n-mr1" />
-  <project path="device/sony/common" name="device-sony-common" groups="device" remote="sony" revision="n-mr1-legacy" />
+  <project path="device/sony/common" name="DevelLevel/android_device_sony_common-AEX" groups="device" remote="github" revision="n-mr1-legacy" />
   <project path="device/sony/common-init" name="device-sony-common-init" groups="device" remote="sony" revision="n-mr1" />
   <project path="device/sony/kitakami" name="device-sony-kitakami" groups="device" remote="sony" revision="n-mr1" />
   <project path="device/sony/suzuran" name="device-sony-suzuran" groups="device" remote="sony" revision="n-mr1" />
