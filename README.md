@@ -7,6 +7,12 @@ To initialize your local repository using the AospExtended trees, use a command 
   repo init -u git://github.com/DevelLevel/android_manifest-AEX.git -b n-mr1
 ```
 
+sync
+
+```bash
+  repo sync -c -jx --force-sync --no-clone-bundle --no-tags
+```
+
 Clone n-mr1 vendor and configure
 
 ```bash
