@@ -79,7 +79,7 @@ To initialize your local repository using the AospExtended trees, use a
 command like this:
 
 ```bash
-  repo init -u git://github.com/DevelLevel/android_manifest-AEX.git -b 7.x
+  repo init -u git://github.com/DevelLevel/android.git -b 7.x-aex
 ```
   
 Then to sync up:
