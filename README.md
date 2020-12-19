@@ -16,7 +16,7 @@ sync
 Clone n-mr1 vendor and configure
 
 ```bash
-  git clone https://github.com/DevelLevel/android_vendor_sony_suzuran.git -b n-mr1 vendor/sony
+  git clone https://github.com/DevelLevel/android_vendor_sony.git -b n-mr1 vendor/sony
   cd vendor/sony/
   cp -r qcom_copy/prebuilt/ ../qcom/
   rm -rf qcom_copy/
