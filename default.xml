@@ -520,7 +520,7 @@
   <project path="kernel/sony/msm8994" name="DevelLevel/android_kernel_sony_msm8994" remote="github" revision="7.x-aex" />
   <project path="device/sony/suzuran" name="DevelLevel/android_device_sony_suzuran" remote="github" revision="7.x-aex" />
   <project path="device/sony/kitakami-common" name="DevelLevel/android_device_sony_kitakami-common" remote="github" revision="7.x-aex" />
-  <project path="vendor/sony" name="DevelLevel/android_vendor_sony_suzuran" remote="github" revision="7.x-aex" />
+  <project path="vendor/sony" name="DevelLevel/android_vendor_sony" remote="github" revision="7.x-aex" />
 
 
   <!-- Vendors -->
