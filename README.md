@@ -21,3 +21,20 @@ Clone n-mr1 vendor and configure
   cp -r qcom_copy/prebuilt/ ../qcom/
   rm -rf qcom_copy/
 ```
+
+Revert commits from the thermalmanager, they are causing build issues...
+
+```bash
+cd vendor/oss/thermanager
+git revert 7010b705245e804bac0dcea4d8783125ef47caac
+git revert 4112bb631c57b5b42e5c20b7a26c59e34692100b
+```
+
+Then build!
+
+
+```bash
+. build/envsetup.sh
+lunch aosp_device_codename-userdebug
+make aex -jx
+```
