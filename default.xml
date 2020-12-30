@@ -530,10 +530,10 @@
   <project path="vendor/broadcom/wlan" name="vendor-broadcom-wlan" groups="device" remote="sony" revision="master" />
 
   <project path="device/sony/sepolicy" name="device-sony-sepolicy" groups="device" remote="sony" revision="n-mr1" />
-  <project path="device/sony/common" name="DevelLevel/android_device_sony_common-AEX" groups="device" remote="github" revision="n-mr1-legacy" />
+  <project path="device/sony/common" name="DevelLevel/android_device_sony_common" groups="device" remote="github" revision="n-mr1-legacy" />
   <project path="device/sony/common-init" name="device-sony-common-init" groups="device" remote="sony" revision="n-mr1" />
   <project path="device/sony/kitakami" name="device-sony-kitakami" groups="device" remote="sony" revision="n-mr1" />
-  <project path="device/sony/suzuran" name="DevelLevel/android_manifest-AEX" groups="device" remote="github" revision="n-mr1" />
+  <project path="device/sony/suzuran" name="DevelLevel/android_device_sony_suzuran" groups="device" remote="github" revision="n-mr1" />
 
   <project path="vendor/nxp/" name="vendor-nxp" groups="device" remote="sony" revision="master" />
   <project path="vendor/nxp/NXPNFCC_FW" name="NXPNFCC_FW" groups="device" remote="NXP" revision="master" />
