@@ -101,7 +101,7 @@
   <remove-project name="platform/packages/apps/PackageInstaller" />
   <remove-project name="platform/packages/apps/Messaging" />
   <remove-project name="platform/packages/apps/DocumentsUI" />
-  <remove-project name="platform/packages/apps/Bluetooth" />
+  <!--remove-project name="platform/packages/apps/Bluetooth" /-->
   <remove-project name="platform/packages/apps/Settings" />
   <remove-project name="platform/packages/inputmethods/LatinIME" />
   <remove-project name="platform/packages/providers/DownloadProvider" />
@@ -109,7 +109,7 @@
   <remove-project name="platform/packages/providers/TelephonyProvider" />
   <remove-project name="platform/packages/services/Telecomm" />
   <remove-project name="platform/packages/services/Telephony" />
-  <remove-project name="platform/system/bt" />
+  <!--remove-project name="platform/system/bt" /-->
   <remove-project name="platform/system/core" />
   <remove-project name="platform/system/extras" />
   <remove-project name="platform/system/media" />
@@ -125,7 +125,7 @@
   <remove-project name="platform/external/mksh" />
   <remove-project name="platform/external/toybox" />
   <remove-project name="platform/external/libdrm" />
-  <remove-project name="platform/packages/apps/ManagedProvisioning" />
+  <!--remove-project name="platform/packages/apps/ManagedProvisioning" /-->
   <remove-project name="platform/external/skia" />
   <remove-project name="platform/external/opencv" />
   <remove-project name="platform/packages/apps/Email" />
