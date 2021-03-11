@@ -115,10 +115,19 @@
   <project path="hardware/qcom/media-caf/sdm845" name="android_hardware_qcom_media" groups="qcom,pdk" remote="los" revision="lineage-15.1-caf-845" />
 
 
+  <!-- Custom -->
   <project path="system/bt" name="android_system_bt" groups="pdk" remote="los" revision="lineage-15.1" />
   <project path="packages/apps/Bluetooth" name="packages_apps_Bluetooth" groups="pdk-cw-fs,pdk-fs" remote="los" revision="lineage-15.1" />
   <project path="packages/services/BuiltInPrintService" name="android_packages_services_BuiltInPrintService" groups="pdk-cw-fs,pdk-fs" remote="los" revision="lineage-15.1" />
   <project path="packages/apps/ManagedProvisioning" name="platform/packages/apps/ManagedProvisioning" groups="pdk-fs" remote="aosp" revision="oreo-mr1-dev"/>
+  <!-- Suzuran -->
+  <project path="device/sony/suzuran" name="DevelLevel/android_device_sony_suzuran" remote="github" revision="8.1.x-aex" />
+  <project path="device/sony/kitakami-common" name="DevelLevel/android_device_sony_kitakami-common" remote="github" revision="8.1.x-aex" />
+  <project path="kernel/sony/msm8994" name="DevelLevel/android_kernel_sony_msm8994" remote="github" revision="8.1.x-aex" />
+  <project path="vendor/sony" name="DevelLevel/android_vendor_sony" remote="github" revision="8.1.x-aex" />
+  <project path="device/sony/common" name="LineageOS/android_device_sony_common" remote="los" revision="lineage-15.1" />
+  <project path="hardware/sony/timekeep" name="LineageOS/android_hardware_sony_timekeep" remote="los" revision="lineage-15.1" />
+
 
   <project path="hardware/broadcom/libbt" name="android_hardware_broadcom_libbt" groups="pdk" remote="los" />
   <project path="hardware/libhardware" name="android_hardware_libhardware" remote="los" />
