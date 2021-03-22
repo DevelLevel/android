@@ -25,8 +25,6 @@ Credits
 
 Setting up the environment! (on ubuntu 20.04 lts)
 -------------
-```bash
-```
 Install REPO:
 ```bash
 mkdir ~/bin
