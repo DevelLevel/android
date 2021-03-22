@@ -23,6 +23,41 @@ Credits
 * [**AOSPA**](https://github.com/aospa/)
 * [**BlissRoms**](https://github.com/BlissRoms)
 
+Setting up the environment! (on ubuntu 20.04 lts)
+-------------
+```bash
+```
+Install REPO:
+```bash
+mkdir ~/bin
+curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
+chmod a+x ~/bin/repo
+```
+Install packages:
+```bash
+sudo apt-get install git-core gnupg flex bison build-essential zip curl zlib1g-dev gcc-multilib g++-multilib libc6-dev-i386 lib32ncurses5-dev x11proto-core-dev libx11-dev lib32z1-dev libgl1-mesa-dev libxml2-utils xsltproc unzip fontconfig libncurses5
+```
+Setup GIT:
+```bash
+git config --global user.name "your name"
+git config --global user.email "your email"
+```
+Configure .bashrc
+```bash
+vim ~/.bashrc
+
+# add this at the bottom
+
+export PATH=~/bin:$PATH
+export USE_CCACHE=1
+export LC_ALL=C
+
+# Exit by executing ("Esc", followd by ":x", followd by "Enter")
+# Then update .bashrc
+
+source ~/.bashrc
+```
+
 How to Build?
 -------------
 
