@@ -1,8 +1,8 @@
 <p align="center">
-<img src="https://github.com/AospExtended/manifest/raw/7.1.1/aex_logo.png" width="320px" height="320px" > 
+<img src="https://raw.githubusercontent.com/AospExtended/Documentation_and_thread-template/10.x/Banner.png" > 
 </p>
 
-AospExtended Oreo
+AospExtended Eleven (For Suzuran)
 ===========
 AospExtended is just an extension to AOSP, through which we 
 are trying to provide a stock AOSP experience along with some important 
@@ -23,37 +23,43 @@ Credits
 * [**AOSPA**](https://github.com/aospa/)
 * [**BlissRoms**](https://github.com/BlissRoms)
 
-Setting up the environment! (on ubuntu 20.04 lts)
+Setting up the environment! (on Rocky Linux 8.4)
 -------------
-Install REPO:
-```bash
-mkdir ~/bin
-curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
-chmod a+x ~/bin/repo
-```
+
 Install packages:
 ```bash
-sudo apt-get install git-core gnupg flex bison build-essential zip curl zlib1g-dev gcc-multilib g++-multilib libc6-dev-i386 lib32ncurses5-dev x11proto-core-dev libx11-dev lib32z1-dev libgl1-mesa-dev libxml2-utils xsltproc unzip fontconfig libncurses5
+  epel_release
+  screen git vim python3 libncurses* gcc gcc-c++ kernel-devel make ccache
 ```
-Setup GIT:
+
+Install REPO:
 ```bash
-git config --global user.name "your name"
-git config --global user.email "your email"
+  mkdir ~/bin
+  curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
+  chmod a+x ~/bin/repo
 ```
-Configure .bashrc
+
+Configure GIT:
 ```bash
-vim ~/.bashrc
+  git config --global user.name "your name"
+  git config --global user.email "your email"
+```
 
-# add this at the bottom
+Configure .bashrc:
+```bash
+  # edit ~/.bashrc and add
+  
+  export PATH=~/bin:$PATH
+  export USE_CCACHE=1
+  export LC_ALL=C
+  
+  # save and run:
+  source ~/.bashrc
+```
 
-export PATH=~/bin:$PATH
-export USE_CCACHE=1
-export LC_ALL=C
-
-# Exit by executing ("Esc", followd by ":x", followd by "Enter")
-# Then update .bashrc
-
-source ~/.bashrc
+Configure python:
+```bash
+  sudo ln -s /usr/bin/python3 /usr/bin/python
 ```
 
 How to Build?
@@ -63,44 +69,45 @@ To initialize your local repository using the AospExtended trees, use a
 command like this:
 
 ```bash
-  repo init -u git://github.com/DevelLevel/android.git -b 8.1.x-aex
+  repo init -u git://github.com/AospExtended/manifest.git -b 11.x
+```
+To initialize a shallow clone, which will save even more space & time, use a command like this:
+
+```bash
+  repo init --depth=1 -u git://github.com/AospExtended/manifest.git -b 11.x
 ```
   
 Then to sync up:
 ----------------
 
 ```bash
-  repo sync -c -jx --force-sync --no-clone-bundle --no-tags
+  repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
 ```
 Finally to build:
 -----------------
 
 ```bash
-  . build/envsetup.sh
+  source build/envsetup.sh
   lunch aosp_device_codename-userdebug
-  mka aex -jx
+  m aex -j$(nproc --all) | tee log.txt
 ```
+## Report build issues
+- You can reach us via [Telegram](https://t.me/aospextendedgroup)
 
+## Maintain Officially
+- If you're building **AospExtended** for an unofficial device and would like to make it official, Check out the link below for more information about the requirements for both you and your device.  
+- [Click here for more info](https://github.com/AospExtended/Documentation_and_thread-template) (**Read full README**)
 
-Please do not forget to go through our [Documentation, Official Devices & Thread Template](https://github.com/AospExtended/Documentation_and_thread-template/) where
-we have our specific guidelines regarding Official Device, Template, Gerrit etc.
+### Important Links:
 
-## Important Links:
-
-- [Our Website, Downloads and Usage Statistics](http://www.aospextended.com/) 
-- [Our Github](https://github.com/AospExtended/)  
-- [Gerrit Code Review](http://gerrit.aospextended.com/) 
-- [Documentation, Official Devices & Thread Template](https://github.com/AospExtended/Documentation_and_thread-template/) 
-- [Apply for Official devices](https://github.com/AospExtended/official_devices) 
-- [Device specific changelogs](https://github.com/AospExtended-Devices/Changelogs)
+- [Website](http://www.aospextended.com/)
+- [Download Center](https://downloads.aospextended.com/)
+- [Blog](https://blog.aospextended.com/)
+- [Gerrit Code Review](http://gerrit.aospextended.com/)
+- [Telegram Channel](https://telegram.me/aospextended/)
+- [Documentation & Thread Template](https://github.com/AospExtended/Documentation_and_thread-template/) 
 - [Help us translate AospExtended ROM and bring it to the world!](http://translate.aospextended.com/)
-- [Telegram Channel](https://telegram.me/aospextended/) 
 - [Theme Resources](https://github.com/AospExtended/AEX-Scripts/) 
-- [Extended Devices](https://github.com/AospExtended-devices/) 
-- [Our Blog](https://blog.aospextended.com/)
-- [Markdown editor ](http://dillinger.io/) 
-- [Markdown cheatsheet ](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) 
-- [Gerrit Manual for AospExtended OS](http://gerrit.aospextended.com/Documentation/intro-user.html) 
-- [AospExtended Gallery](https://aospextended.imgur.com/) 
-- [Facebook page!](https://www.facebook.com/aospextended/) 
-
+- [Extended Devices](https://github.com/AospExtended-devices/)
+- [Gallery](https://aospextended.com/gallery)
+- [Facebook page!](https://www.facebook.com/aospextended/)
