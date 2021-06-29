@@ -28,7 +28,7 @@ Setting up the environment! (on Rocky Linux 8.4)
 
 Install packages:
 ```bash
-  sudo dnf install epel_release
+  sudo dnf install epel-release
   sudo dnf install screen git vim python3 libncurses* gcc gcc-c++ kernel-devel make ccache
 ```
 
