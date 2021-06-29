@@ -63,6 +63,10 @@ Configure python:
   sudo ln -s /usr/bin/python3 /usr/bin/python
 ```
 
+Sync device specific repositories!
+-------------
+Comming soon...
+
 How to Build?
 -------------
 
