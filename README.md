@@ -28,8 +28,8 @@ Setting up the environment! (on Rocky Linux 8.4)
 
 Install packages:
 ```bash
-  epel_release
-  screen git vim python3 libncurses* gcc gcc-c++ kernel-devel make ccache
+  sudo dnf install epel_release
+  sudo dnf install screen git vim python3 libncurses* gcc gcc-c++ kernel-devel make ccache
 ```
 
 Install REPO:
