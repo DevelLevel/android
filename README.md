@@ -45,7 +45,7 @@ Configure GIT:
   git config --global user.email "your email"
 ```
 
-Configure .bashrc:
+Configure .bashrc and ccache:
 ```bash
   # edit ~/.bashrc and add
   
@@ -55,6 +55,7 @@ Configure .bashrc:
   
   # save and run:
   source ~/.bashrc
+  ccache -M XG # Where x is the maximum allowed space for cache to occupy
 ```
 
 Configure python:
