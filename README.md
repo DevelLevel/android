@@ -63,27 +63,6 @@ Configure python:
   sudo ln -s /usr/bin/python3 /usr/bin/python
 ```
 
-Bring suzuran
--------------
-
-Sync device specific repositories:
-```bash
-git clone https://github.com/DevelLevel/android_device_sony_suzuran.git -b 11.x-aex device/sony/suzuran
-git clone https://github.com/DevelLevel/android_device_sony_kitakami-common.git -b 11.x-aex device/sony/kitakami-common
-git clone https://github.com/ArrowOS/android_device_qcom_sepolicy-legacy.git -b arrow-11.0 device/qcom/sepolicy-legacy
-git clone https://github.com/DevelLevel/android_kernel_sony_msm8994.git -b 11.x kernel/sony/msm8994
-git clone https://github.com/LineageOS/android_hardware_sony_timekeep.git -b lineage-18.1 hardware/sony/timekeep
-git clone https://github.com/LineageOS/android_hardware_broadcom_fm.git -b lineage-18.1 hardware/broadcom/fm
-git clone https://github.com/DevelLevel/android_vendor_sony.git -b 11.x vendor/sony
-```
-
-Configure the vendor blobs:
-```bash
-cd vendor/sony/kitakami-common-extras/
-git submodule init
-git submodule update
-```
-
 How to Build?
 -------------
 
@@ -105,6 +84,28 @@ Then to sync up:
 ```bash
   repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
 ```
+
+Bring suzuran
+-------------
+
+Sync device specific repositories:
+```bash
+git clone https://github.com/DevelLevel/android_device_sony_suzuran.git -b 11.x-aex device/sony/suzuran
+git clone https://github.com/DevelLevel/android_device_sony_kitakami-common.git -b 11.x-aex device/sony/kitakami-common
+git clone https://github.com/ArrowOS/android_device_qcom_sepolicy-legacy.git -b arrow-11.0 device/qcom/sepolicy-legacy
+git clone https://github.com/DevelLevel/android_kernel_sony_msm8994.git -b 11.x kernel/sony/msm8994
+git clone https://github.com/LineageOS/android_hardware_sony_timekeep.git -b lineage-18.1 hardware/sony/timekeep
+git clone https://github.com/LineageOS/android_hardware_broadcom_fm.git -b lineage-18.1 hardware/broadcom/fm
+git clone https://github.com/DevelLevel/android_vendor_sony.git -b 11.x vendor/sony
+```
+
+Configure the vendor blobs:
+```bash
+cd vendor/sony/kitakami-common-extras/
+git submodule init
+git submodule update
+```
+
 Finally to build:
 -----------------
 
